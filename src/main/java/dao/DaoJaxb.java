@@ -1,10 +1,10 @@
 package dao;
 
 import generated.Factura;
+import jakarta.xml.bind.JAXBException;
+import org.xml.sax.SAXException;
 
 public interface DaoJaxb {
 
-     default Factura getInvoice(String pathXML, String pathXSD) {
-
-    }
+     Factura getInvoice(String pathXml, String pathXsd) throws JAXBException, SAXException;
 }
